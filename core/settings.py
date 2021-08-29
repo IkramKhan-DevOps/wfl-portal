@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'src.dev',
 
     # CUSTOM APPS
+    'src.website',
 ]
 
 """ MIDDLE WARES ----------------------------------------------------------------------------"""

@@ -19,13 +19,15 @@ from django.views.generic import TemplateView
 from .settings import DEBUG, MEDIA_ROOT, MEDIA_URL
 from django.conf.urls.static import static
 
-
 urlpatterns = [
     # ADMIN/ROOT APPLICATION
     path('admin/', admin.site.urls),
 
-    # WEBSITE APPLICATION
-    path('exarth/', include('src.dev.urls', namespace='exarth'))
+    # EXARTH APPLICATION
+    path('exarth/', include('src.dev.urls', namespace='exarth')),
+
+    # WFL - PROJECT ------------------------------------------
+    path('', include('src.website.urls', namespace='website'))
 ]
 
 if DEBUG:
