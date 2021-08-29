@@ -24,7 +24,7 @@ if DEBUG:
     HOST = config('DJANGO_LOCAL_HOST')
 else:
     HOST = config('DJANGO_SERVER_HOST')
-ALLOWED_HOST = [HOST]
+ALLOWED_HOSTS = ["*"]
 
 """ APPS ---------------------------------------------------------------------------------------"""
 INSTALLED_APPS = [

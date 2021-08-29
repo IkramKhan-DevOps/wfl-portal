@@ -116,7 +116,7 @@
 })(function() {
     if (typeof module !== 'undefined') {
         // Node
-        return require('jquery');
+        return require('static/theme/js/jquery');
     } else {
         return jQuery;
     }
