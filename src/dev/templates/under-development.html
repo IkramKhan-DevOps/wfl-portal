@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Page | Under-development
+{% endblock %}
+
+
+{% block without_body %}
+    <div class="text-center container py-5">
+        <div class="row justify-content-center mb-2">
+            <div class="col-sm-5">
+                <h1 class="font-weight-bolder">EXARTH
+                    <small style="font-size: 12px">says</small>
+                </h1>
+                <p class="text-danger"><b>ERROR : </b>
+                    Request Page is under-construction please visit later - See the exalter below he's
+                    working hard to get job done &#128516;.
+                </p>
+            </div>
+        </div>
+        <img class="img-fluid" src="{% static 'dev/images/construction-png.png' %}" alt="Construction png ">
+    </div>
+{% endblock %}

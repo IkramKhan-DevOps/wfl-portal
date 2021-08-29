@@ -1,0 +1,59 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="shortcsetut icon" href="{% static 'dev/images/exarth_favico.ico' %}">
+    <title>
+    EXARTH |
+        {% block title %}
+
+        {% endblock title %}
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% static 'dev/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'dev/css/icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'dev/css/style.css' %}" rel="stylesheet" type="text/css">
+    {% block css_links %}
+
+    {% endblock %}
+
+
+</head>
+<body style="background-color: #f5f5f5;">
+
+{# FOR ALL PAGES WIRHOUT HEADER AND DIVS #}
+{% block without_body %}
+
+
+    {% block header %}
+        {% include 'include/header.html' %}
+    {% endblock %}
+
+
+    <div class="container py-4">
+        <div class="row">
+            {% include 'include/messages.html' %}
+        </div>
+
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+{% endblock %}
+
+
+
+
+<script src="{% static 'dev/js/jquery.min.js' %}"></script>
+<script src="{% static 'dev/js/bootstrap.bundle.min.js' %}"></script>
+{% block javascript_links %}
+
+{% endblock %}
+
+</body>
+</html>
+
+{% block javascript_code %}
+
+{% endblock %}

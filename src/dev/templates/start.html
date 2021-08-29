@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+    <div class="row my-4 justify-content-center">
+        <div class="col-sm-12 text-center">
+            <img src="{% static 'dev/images/exarth-logo.png' %}" class="" height="100" alt="">
+            <p class="h1 font-weight-bolder mb-0">EXARTH </p>
+            <p class="font-weight-bolder">__The oath we have taken__</p>
+
+            <p class="font-weight-bolder text-muted mb-0">
+                Requested project is under construction, project will be change according to customer
+                requirements, project is unstable and is not allowed to use in production environment,
+                prohibited for <a class="text-danger">penetration</a> or <a class="text-danger">security testing</a>,
+                it contains number of bugs, issues, problems and
+                spelling mistakes etc, design is not complete and final it will change later, privacy policies,
+                agreements and other ethical requirements will be fulfilled according to
+                government laws, all licenses will be purchased and credits will be given at the end, Need any help
+                please check the links below.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="cols card p-2 m-2">
+            <a href="/admin/" target="_blank">
+                <div class="text-center">
+                    <h2 class="m-0">
+                        <i class="fa fa-user"></i>
+                    </h2>
+
+                    <p class="mb-0 card-title font-weight-bolder">
+                        Admin
+                    </p>
+                    <small class="text-muted">Developers panel</small>
+                </div>
+            </a>
+        </div>
+
+        <div class="cols card p-2 m-2">
+            <a href="/exarth/status/" target="_blank">
+                <div class="text-center">
+                    <h2 class="m-0">
+                        <i class="fa fa-code"></i>
+                    </h2>
+
+                    <p class="mb-0 card-title font-weight-bolder">
+                        DevApp
+                    </p>
+                    <small class="text-muted">Development panel</small>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="cols card p-2 m-2">
+            <a href="#" target="_blank">
+                <div class="text-center">
+                    <h2 class="m-0">
+                        <i class="fa fa-globe"></i>
+                    </h2>
+
+                    <p class="mb-0 card-title font-weight-bolder">
+                        Application
+                    </p>
+                    <small class="text-muted">Visit Application</small>
+                </div>
+            </a>
+        </div>
+
+        <div class="cols card p-2 m-2">
+            <a href="#" target="_blank">
+                <div class="text-center">
+                    <h2 class="m-0">
+                        <i class="fa fa-book"></i>
+                    </h2>
+
+                    <p class="mb-0 card-title font-weight-bolder">
+                        Policy
+                    </p>
+                    <small class="text-muted">Privacy policy</small>
+                </div>
+            </a>
+        </div>
+
+        <div class="cols card p-2 m-2">
+            <a href="https://exarth.com/contact-us/" target="_blank">
+                <div class="text-center">
+                    <h2 class="m-0">
+                        <i class="fa fa-phone"></i>
+                    </h2>
+
+                    <p class="mb-0 card-title font-weight-bolder">
+                        Need Help
+                    </p>
+                    <small class="text-muted">Contact Exarth</small>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+
+    <hr>
+    <p class="text-right text-muted">Under-development at
+        <a href="https://exarth.com/" target="_blank" class="font-weight-bolder"><i class="fa fa-globe"></i> Exarth</a>
+    </p>
+
+
+{% endblock %}

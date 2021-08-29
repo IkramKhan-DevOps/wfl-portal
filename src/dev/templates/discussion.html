@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    {{ discussion.get_question_type_display }}
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="text-right mb-4">
+                {% if discussion.is_satisfied %}
+                    <h4 class="font-weight-bolder text-danger">
+                        <span class="badge badge-danger p-2">Satisfied and Closed</span>
+                    </h4>
+                {% else %}
+                    <h4 class="font-weight-bolder text-success">
+                        <span class="badge badge-success p-2">UnSatisfied and Open</span>
+                    </h4>
+                {% endif %}
+            </div>
+
+            <div class="card">
+                <div class="card-header bg-white border-0">
+                    <p class="m-0 h4 font-weight-bolder">
+                        {{ discussion.started_by.first_name }} {{ discussion.started_by.first_name }}
+                        {% if discussion.started_by == request.user %}
+                            <a href="{% url 'exarth:update_discussion' discussion.pk %}"><i
+                                    class="text-dark fa fa-edit"></i></a>
+                        {% endif %}
+                    </p>
+                    <small class="text-muted font-italic">
+                        {% if discussion.started_by.is_superuser %}
+                            <i class="fa fa-code"></i> Development Team
+                        {% elif discussion.started_by.is_staff %}
+                            <i class="fa fa-user"></i> Customer Circle
+                        {% else %}
+                            <i class="fa fa-exclamation-circle"></i> Undefined
+                        {% endif %}
+                    </small>
+                </div>
+                <div class="card-body">
+                    {# QUESTION #}
+                    <div class="mb-2">
+                        <p class="mb-0 card-text">
+                            {{ discussion.description }}
+                        </p>
+
+                    </div>
+                </div>
+                <div class="card-footer border-0">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="small mt-2 text-muted">Created on: {{ discussion.created_on }}</p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            {% if not discussion.is_satisfied %}
+                                <a class="btn btn-sm btn-primary"
+                                   href="{% url 'exarth:add_answer_to_discussion' discussion.pk %}"><i
+                                        class="fa fa-plus"></i> Submit Answer</a>
+                                {% if discussion.started_by == request.user %}
+                                    <a class="btn btn-sm btn-dark"
+                                       href="{% url 'exarth:satisfied_discussion' discussion.pk %}">
+                                        <i class="fa fa-check"></i> Satisfied</a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if discussion_answers %}
+        {% for discussion_answer in discussion_answers %}
+
+            <div class="row pb-2">
+                <div class="card-body">
+                    <p class="">{{ discussion_answer.answer|safe }}</p>
+                    <p class="mb-0 font-weight-bolder">
+                        {{ discussion_answer.answer_by.first_name }} {{ discussion_answer.answer_by.last_name }}
+                        {% if discussion_answer.answer_by == request.user %}
+                            <a href="{% url 'exarth:update_answer_of_discussion' discussion_answer.pk  discussion.pk %}">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                        {% endif %}
+                    </p>
+                    <p class="mb-0 text-muted small font-italic">{{ discussion_answer.created_on }}</p>
+                </div>
+            </div>
+
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

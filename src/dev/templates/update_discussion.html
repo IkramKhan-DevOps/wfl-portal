@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Update Discussion
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row mb-4">
+        <div>
+            <p class="h4 m-0">Update Discussion</p>
+            <p class="small text-muted">
+                You can start update discussion here
+            </p>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+        <div class="col-sm-10">
+            <div class="card">
+
+                <div class="card-body">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form.media }}
+                        {{ form|crispy }}
+                        <button class="btn btn-primary">
+                            <i class="fa fa-edit"></i> Update
+                        </button>
+                        <a class="btn btn-danger" href="{% url 'exarth:delete_discussion' id %}">
+                            <i class="fa fa-trash"></i> End
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

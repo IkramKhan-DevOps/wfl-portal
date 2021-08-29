@@ -1,0 +1,407 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Dev
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row mb-4 justify-content-center">
+        <div class="col-sm-12 text-center">
+
+            {% if project.logo %}
+                <img src="{{ project.logo.url }}" class="" alt="project logo" height="100">
+            {% else %}
+                <img src="{% static 'dev/images/no-logo.png' %}" class="" alt="project logo" height="100">
+            {% endif %}
+
+
+            <p class="h1 font-weight-bolder mb-0">{{ project.name }}
+                <small class="font-weight-bolder text-danger">{{ project.version }}</small>
+            </p>
+            <p class="font-weight-bolder">{{ project.tag_line }}</p>
+            <p class="text-italic text-muted">{{ project.description }}</p>
+            <div class="row justify-content-center">
+
+                <div class="cols">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="font-weight-bolder m-0" id="days">00</h2>
+                        </div>
+                        <div class="card-footer border-0">
+                            Days
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cols">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="font-weight-bolder m-0" id="hours">00</h2>
+                        </div>
+                        <div class="card-footer border-0">
+                            Hours
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cols">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="font-weight-bolder m-0" id="minutes">00</h2>
+                        </div>
+                        <div class="card-footer border-0">
+                            Minutes
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cols">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="font-weight-bolder m-0" id="seconds">00</h2>
+                        </div>
+                        <div class="card-footer border-0">
+                            Seconds
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div>
+            <p class="h4 m-0 pl-2">Development Workflow</p>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+
+        {# IDEA #}
+        <div class="col-sm-3 text-center">
+            <div class="card border border-success text-success">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-home"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        1. Idea Extraction
+                    </p>
+                    <p class="card-text m-0">
+                        Allowing our entire team to get complete understanding of our client’s business, vision and
+                        goals.
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-check-circle"></i> Working
+                </div>
+            </div>
+        </div>
+
+        {# Researching #}
+        <div class="col-sm-3 text-center">
+            <div class="card ">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-search"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        2. Researching
+                    </p>
+                    <p class="card-text m-0">
+                        Allowing us to make our own assumptions and research any aspect that we might feel differently
+                        about.
+                    </p>
+                </div>
+                <div class="card-footer border-top-0">
+                    <i class="fa fa-pen"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# Prototyping #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-map-signs"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        3. Prototyping
+                    </p>
+                    <p class="card-text m-0">
+                        Allowing UI/UX and development teams to go through detailed information for flawless
+                        deliverables
+                    </p>
+                </div>
+                <div class="card-footer border-top-0">
+                    <i class="fa fa-pen"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# Designing #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-paint-brush"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        4. Designing
+                    </p>
+                    <p class="card-text m-0">
+                        From initial ideation through solution design, we will work with you and your users to design
+                        the perfect solution.
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-times-circle"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# Implementation-1 #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-code"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        5. Implementation-1
+                    </p>
+                    <p class="card-text m-0">
+                        Using the latest platforms, frameworks and technologies, we deliver highly effective software
+                        iteration 1
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-exclamation-triangle"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# Implementation-2 #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-code"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        6. Implementation-2
+                    </p>
+                    <p class="card-text m-0">
+                        Using the latest platforms, frameworks and technologies, we deliver highly effective software
+                        iteration 2
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-exclamation-triangle"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# Implementation-3 #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-code"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        7. Implementation-3
+                    </p>
+                    <p class="card-text m-0">
+                        Using the latest platforms, frameworks and technologies, we deliver highly effective software
+                        iteration 3
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-exclamation-triangle"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# API's #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-cloud"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        8. Cloud/API's
+                    </p>
+                    <p class="card-text m-0">
+                        Our team will develop cloud-to-cloud integrations links and rest api's according to customer
+                        needs
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-exclamation-triangle"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# Integrations #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-archive"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        9. Integrations
+                    </p>
+                    <p class="card-text m-0">
+                        After completion of design, 3 iterations of implementation and other modules will be integrated.
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-exclamation-triangle"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# Optimization #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-compress"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        10. Optimization
+                    </p>
+                    <p class="card-text m-0">
+                        Our team will provide free application documents fully optimized system and SEO upto some extend
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-exclamation-triangle"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# Testing #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-fire-extinguisher"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        11. Testing
+                    </p>
+                    <p class="card-text m-0">
+                        Our team provides 10-15 days of testing before the release of production version
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-exclamation-triangle"></i> Pending
+                </div>
+            </div>
+        </div>
+
+        {# Deployment #}
+        <div class="col-sm-3 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <p class="h1"><i class="fa fa-upload"></i></p>
+                    <p class="card-title font-weight-bolder m-0">
+                        12. Deployment
+                    </p>
+                    <p class="card-text m-0">
+                        At the end complete system will be deployed whereas source code and documentation will be given
+                    </p>
+                </div>
+                <div class="card-footer bg-light border-top-0">
+                    <i class="fa fa-exclamation-triangle"></i> Pending
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="modal fade" id="models_c" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="exampleModalLabel"><i class="fa fa-exclamation-circle"></i>
+                        <b>ALERT</b>
+                    </p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <p class="h4 mb-0">PROJECT: ES School Portals</p>
+                        <p class="small text-danger">(pre-alpha 0.0.1)</p>
+                        <div class="text-left">
+                            <p class="m-0"><b class="text-danger font-weight-bolder">NOTICE: </b></p>
+                            <ul>
+                                <li>
+                                    You are seeing a dummy prototype whole project will be change according to customer
+                                    requirements.
+                                </li>
+                                <li>Project is unstable and is not allowed to use in production environment.</li>
+                                <li>Prohibited for penetration or security testing.</li>
+                                <li>Contains number of bugs, issues, problems and spelling mistakes etc.</li>
+                                <li>Design is not complete and final it will change later.</li>
+                                <li>Privacy policies, Agreements and other ethical requirements will be fulfilled
+                                    according to
+                                    government laws.
+                                </li>
+                                <li>All licenses will be purchased and credits will be given at the end.</li>
+                            </ul>
+                        </div>
+                        <hr>
+
+                        <div class="text-left">
+                            <p class="mb-0 text-danger"><b>Kind Regards</b></p>
+                            <p>
+                                ES School Portal development Team by <b><a href="https://exarth.com/" target="_blank">Exarth</a></b>
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
+
+{% block javascript_code %}
+    <script>
+        $(document).ready(function () {
+
+            {#$('#models_c').modal('show');#}
+            countdown_timer();
+
+            function countdown_timer() {
+                var countDownDate = new Date("{{ project.last_date|date:'D M d Y H:i:s'  }}"
+                ).getTime();
+
+                // Update the count down every 1 second
+                var x = setInterval(function () {
+
+                    // Get today's date and time
+                    var now = new Date().getTime();
+
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+
+                    // Output the result in an element with id="demo"
+                    document.getElementById('days').innerHTML = days;
+                    document.getElementById('hours').innerHTML = hours;
+                    document.getElementById('minutes').innerHTML = minutes;
+                    document.getElementById('seconds').innerHTML = seconds;
+
+
+                }, 1000);
+            }
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Discussion Board
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row mb-4">
+
+        <div class="col">
+            <p class="h4 m-0">Discussion Board</p>
+            <p class="small text-muted">
+                Discussion board holds communication between customer circle and development teams, you can add errors
+                problems issues and bugs etc stay active for
+                better output.
+            </p>
+        </div>
+
+        <div class="col">
+            <div class="text-right mb-4">
+                <a class="btn btn-primary" href="{% url 'exarth:add_discussion' %}">
+                    <i class="fa fa-plus"></i>
+                    Start Discussion
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        {% if discussions %}
+            <div class="col-sm-8">
+
+                <div class="card border-0">
+                    <div class="card-body">
+
+
+                        {% for discussion in discussions %}
+                            <div class="mb-4">
+                                <p class="">
+                                    <a href="{% url 'exarth:discussion' discussion.pk %}">
+                                        {{ discussion.description }}
+                                    </a>
+                                </p>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-0 h6 font-weight-bolder">
+                                            {{ discussion.started_by.first_name }} {{ discussion.started_by.first_name }}
+                                        </p>
+                                        <small class="text-muted font-italic">
+                                            {% if discussion.started_by.is_superuser %}
+                                                <i class="fa fa-code"></i> Development Team
+                                            {% elif discussion.started_by.is_staff %}
+                                                <i class="fa fa-user"></i> Customer Circle
+                                            {% else %}
+                                                <i class="fa fa-exclamation-circle"></i> Undefined
+                                            {% endif %}
+                                        </small>
+
+                                    </div>
+                                    <div class="col-sm-6 text-right text-secondary">
+                                        <p class="m-0">
+                                            {% if discussion.is_answered %}
+                                                <i
+                                                        class="fa fa-check-circle text-success"></i>
+                                            {% else %}
+                                                <i class="fa fa-times-circle text-danger"></i>
+                                            {% endif %}
+                                            {% if discussion.is_satisfied %}
+                                                <i
+                                                        class="fa fa-check-circle text-success"></i>
+                                            {% else %}
+                                                <i
+                                                        class="fa fa-times-circle text-danger"></i>
+                                            {% endif %}
+                                        </p>
+                                        <p class="text-muted font-italic small">
+                                            ({{ discussion.get_topic_display }})
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="col-sm-4">
+
+            {% if discussions_me %}
+                <div class="card mb-4">
+                    <div class="card-header border-0">
+                        <p class="m-0 card-title font-weight-bolder">Your Discussions</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            {% for discussion in discussions_me %}
+                                <li>
+                                    <a href="{% url 'exarth:discussion' discussion.pk %}">{{ discussion.description|truncatechars:35 }}</a>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+            {% endif %}
+
+            {% if discussions_all %}
+                <div class="card mb-4">
+                    <div class="card-header border-0">
+                        <p class="m-0 card-title font-weight-bolder">Other Discussions</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            {% for discussion in discussions_all %}
+                                <li>
+                                    <a href="{% url 'exarth:discussion' discussion.pk %}">{{ discussion.description|truncatechars:35 }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+
+
+{% endblock %}

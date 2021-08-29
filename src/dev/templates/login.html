@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Exarth | Dev | Login
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <div class="row my-4 justify-content-center">
+        <div class="col-sm-6 card">
+
+            <div class="card-body">
+
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    {% if request.GET.next %}
+                        <input type="hidden" name="next" value="{{ request.GET.next }}">
+                    {% endif %}
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fa fa-lock"></i> Login
+                    </button>
+                    <br><br>
+                    <a class="" href="/exarth/"> <i class="fa fa-home"></i> Back to Home</a>
+                    <hr>
+                    <p class="font-weight-bold text-muted text-center">
+                        If you are developer, product owner or reviewer login here, if you don't have an account
+                        please consult development team at <a href="https://exarth.com/"><i class="fa fa-globe"></i>
+                        Exarth</a></p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

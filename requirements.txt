@@ -1,0 +1,9 @@
+django-ckeditor
+django
+django-crispy-forms
+python-decouple
+django-robots
+pillow
+
+
+# python -m pip install --upgrade Pillow >>> install pillow with this

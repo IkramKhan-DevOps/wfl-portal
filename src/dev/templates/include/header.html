@@ -1,0 +1,33 @@
+<nav class="navbar text-light bg-dark justify-content-between">
+    <div class="container">
+        <a class="navbar-brand text-light" href="/exarth/">DEV.<small
+                class="small text-muted">Exarth</small></a>
+        <ul class="navbar-nav flex-row mt-2 ml-2">
+
+            <li class="nav-item pr-2 border-right">
+                <a class="nav-link text-light" href="{% url 'exarth:discussions' %}">
+                    <i class="fa fa-users"></i> Discussions</a>
+            </li>
+
+            <li class="nav-item px-2">
+                <a class="nav-link text-light" href="/">
+                    <i class="fa fa-eye"></i>
+                </a>
+            </li>
+
+            <li class="nav-item px-2">
+                <a class="nav-link text-light" href="/admin/">
+                    <i class="fa fa-user"></i>
+                </a>
+            </li>
+
+
+
+            <li class="nav-item px-2">
+                <a class="nav-link text-danger" href="{% url 'exarth:logout' %}">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

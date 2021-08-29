@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Start Discussion
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row mb-4">
+        <div>
+            <p class="h4 m-0">Add New Discussion</p>
+            <p class="small text-muted">
+                You can start discussion here on system bugs,
+                errors problems and suggestions etc.
+            </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-sm-10">
+            <div class="card">
+
+                <div class="card-body">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form.media }}
+                        {{ form|crispy }}
+                        <button class="btn btn-primary">
+                            <i class="fa fa-clipboard-check"></i> Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
