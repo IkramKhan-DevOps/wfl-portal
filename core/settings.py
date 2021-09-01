@@ -24,7 +24,7 @@ if DEBUG:
     HOST = config('DJANGO_LOCAL_HOST')
 else:
     HOST = config('DJANGO_SERVER_HOST')
-ALLOWED_HOSTS = [HOST]
+ALLOWED_HOSTS = ["*"]
 
 """ APPS ---------------------------------------------------------------------------------------"""
 INSTALLED_APPS = [
@@ -106,9 +106,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    BASE_DIR / "static",
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = BASE_DIR / "assets"
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -123,12 +124,12 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'
 """ EMAIL SYSTEM ---------------------------------------------------------------------------------"""
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
 
-# EMAIL_HOST = config('EMAIL_HOST')
-# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-# EMAIL_PORT = config('EMAIL_HOST_PORT')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = config('EMAIL_HOST_PORT')
 
-# DEFAULT_FROM_EMAIL = 'Exarth <noreply@application.com>'
+DEFAULT_FROM_EMAIL = 'Exarth <noreply@application.com>'

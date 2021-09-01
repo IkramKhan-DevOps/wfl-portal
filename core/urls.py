@@ -15,21 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import TemplateView
-from .settings import DEBUG, MEDIA_ROOT, MEDIA_URL
-from django.conf.urls.static import static
 
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     # ADMIN/ROOT APPLICATION
     path('admin/', admin.site.urls),
 
-    # WEBSITE APPLICATION
-    path('', include('src.website.urls', namespace='website')),
-
     # EXARTH APPLICATION
-    path('exarth/', include('src.dev.urls', namespace='exarth'))
-]
+    path('exarth/', include('src.dev.urls', namespace='exarth')),
 
-if DEBUG:
-    urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
+    # WFL - PROJECT ------------------------------------------
+    path('', include('src.website.urls', namespace='website'))
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

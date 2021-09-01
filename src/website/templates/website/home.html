@@ -1,2 +1,784 @@
-{% extends 'website/base.html' %}
 {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WFL | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'core/icons/favico.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'theme/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/fontawesome-all.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/jquery.mCustomScrollbar.min.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/odometer-theme-default.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/web-application.css' %}">
+</head>
+<body class="web-app-home" data-spy="scroll" data-target=".web-app-main-navigation" data-offset="80">
+<!-- preloader - start -->
+<div id="web-app-preloader"></div>
+<div class="up">
+    <a href="#" class="web-app-scrollup text-center"><i class="fas fa-arrow-up"></i></a>
+</div>
+<!-- Start of header section
+    ============================================= -->
+<header id="web-app-header" class="web-app-main-header">
+    <div class="container">
+        <div class="web-app-main-header-content clearfix">
+            <div class="web-app-brand-logo float-left">
+                <a href="#"><b class="font-weight-bolder" style="font-size: 20px;">WFL</b></a>
+            </div>
+            <div class="web-app-main-menu-item float-right">
+                <nav class="web-app-main-navigation  clearfix ul-li">
+                    <ul id="main-nav" class="navbar-nav text-capitalize">
+                        <li><a class="nav-link" href="#web-app-banner">Home</a></li>
+                        <li><a class="nav-link" href="#web-app-feature">Features</a></li>
+                        <li><a class="nav-link" href="#web-app-about">About</a></li>
+                        <li><a class="nav-link" href="#web-app-testimonial">Testimonial</a></li>
+                        <li><a class="nav-link" href="#web-app-pricing">Pricing </a></li>
+                        <li><a class="nav-link" href="#web-app-newslatter">Newslatter</a></li>
+                    </ul>
+                </nav>
+                <div class="web-app-header-btn text-center float-right">
+                    <a href="#">Try a free trail</a>
+                </div>
+            </div>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="web-app-mobile_menu position-relative">
+            <div class="web-app-mobile_menu_button web-app-open_mobile_menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="web-app-mobile_menu_wrap">
+                <div class="mobile_menu_overlay web-app-open_mobile_menu"></div>
+                <div class="web-app-mobile_menu_content">
+                    <div class="web-app-mobile_menu_close web-app-open_mobile_menu">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="m-brand-logo text-center">
+                        <a href="%21.html#"><img src="{% static 'theme/img/web-application/logo/logo1.png' %}"
+                                                 alt=""></a>
+                    </div>
+                    <nav class="web-app-mobile-main-navigation  clearfix ul-li">
+                        <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
+                            <li class="dropdown">
+                                <a href="#">Home</a>
+                                <ul class="dropdown-menu clearfix">
+                                    <li><a href="#">DropDown 1</a></li>
+                                    <li><a href="#">DropDown 2</a></li>
+                                    <li><a href="#">DropDown 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Features</a>
+                                <ul class="dropdown-menu clearfix">
+                                    <li><a href="#">DropDown 1</a></li>
+                                    <li><a href="#">DropDown 2</a></li>
+                                    <li><a href="#">DropDown 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Pricing </a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /Mobile-Menu -->
+        </div>
+    </div>
+</header>
+<!-- Start of header section
+    ============================================= -->
+
+<!-- Start of banner section
+    ============================================= -->
+<section id="web-app-banner" class="web-app-banner-section position-relative">
+    <span class="web-app-banner-shape shape-1 position-absolute" data-parallax='{"y" : 100, "rotateY":500}'><img
+            src="{% static 'theme/img/web-application/shape/bs3.png' %}" alt=""></span>
+    <span class="web-app-banner-shape shape-2 position-absolute" data-parallax='{"y" : 200, "rotateY":500}'><img
+            src="{% static 'theme/img/web-application/shape/bs2.png' %}" alt=""></span>
+    <span class="web-app-banner-shape shape-3 position-absolute" data-parallax='{"y" : 300, "rotateY":500}'><img
+            src="{% static 'theme/img/web-application/shape/bs1.png' %}" alt=""></span>
+    <div class="container">
+        <div class="web-app-banner-content position-relative">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="web-app-banner-text web-app-headline pera-content">
+                        <h1 class="cd-headline push">Unlimited Color
+                            Option <span class="cd-words-wrapper">
+                                    <b class="is-visible"> with SaaSio.</b>
+                                    <b>Our Theme</b>
+                                    <b>This App</b>
+                                </span>
+                        </h1>
+                        <p>A better way to manage your sales, team, clients
+                            on a <b>Powerful, affordable & easy way.</b>
+                        </p>
+                        <div class="web-app-banner-form position-relative">
+                            <form action="#" method="POST">
+                                <input type="email" placeholder="Your mail address...">
+                                <button type="submit">Start a free trail</button>
+                            </form>
+                        </div>
+                        <div class="web-app-banner-slug">
+                            <span>Free 07-day trial</span>
+                            <span>Cancel any time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="web-app-banner-vector position-relative text-right">
+                        <div class="web-app-banner-vector-img-1 wow zoomIn" data-wow-delay="0ms"
+                             data-wow-duration="1000ms">
+                            <img src="{% static 'theme/img/web-application/banner/bv-2.png' %}" alt="">
+                        </div>
+                        <div class="web-app-banner-vector-img-2 position-absolute">
+                            <div class="web-app-banner-v-img wow fadeInLeft" data-wow-delay="600ms"
+                                 data-wow-duration="1000ms">
+                                <img src="{% static 'theme/img/web-application/banner/bv-3.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="web-app-banner-vector-img-3 position-absolute">
+                            <div class="web-app-banner-v-img  wow fadeInRight" data-wow-delay="700ms"
+                                 data-wow-duration="1000ms">
+                                <img src="{% static 'theme/img/web-application/banner/bv-1.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of banner section
+    ============================================= -->
+
+<!-- Start of feature section
+    ============================================= -->
+<section id="web-app-feature" class="web-app-feature-section">
+    <div class="container">
+        <div class="web-app-section-title web-app-headline text-center">
+            <h2>Our Optimized Configuration <span>Process Saves Your Team</span></h2>
+        </div>
+        <div class="web-app-feature-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+                    <div class="web-app-feature-innerbox">
+                        <div class="web-app-feature-icon position-relative">
+                            <span class="web-app-f-shape position-absolute shape1"><img
+                                    src="{% static 'theme/img/web-application/shape/f-sh1.png' %}" alt=""></span>
+                            <span class="web-app-f-shape position-absolute shape2"><img
+                                    src="{% static 'theme/img/web-application/shape/f-sh2.png' %}" alt=""></span>
+                            <span class="web-app-f-shape position-absolute shape3"><img
+                                    src="{% static 'theme/img/web-application/shape/f-sh3.png' %}" alt=""></span>
+                            <img src="{% static 'theme/img/web-application/icon/f-icon1.png' %}" alt="">
+                        </div>
+                        <div class="web-app-feature-text web-app-headline pera-content">
+                            <h3><a href="#">Unlimited Color Option</a></h3>
+                            <p>Seamlessly aggregate pandemic for leadership through functionalized & information
+                                technology.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="100ms" data-wow-duration="1000ms">
+                    <div class="web-app-feature-innerbox">
+                        <div class="web-app-feature-icon position-relative">
+                            <span class="web-app-f-shape position-absolute shape1"><img
+                                    src="{% static 'theme/img/web-application/shape/f-sh1.png' %}" alt=""></span>
+                            <span class="web-app-f-shape position-absolute shape2"><img
+                                    src="{% static 'theme/img/web-application/shape/f-sh2.png' %}" alt=""></span>
+                            <span class="web-app-f-shape position-absolute shape3"><img
+                                    src="{% static 'theme/img/web-application/shape/f-sh3.png' %}" alt=""></span>
+                            <img src="{% static 'theme/img/web-application/icon/f-icon2.png' %}" alt="">
+                        </div>
+                        <div class="web-app-feature-text web-app-headline pera-content">
+                            <h3><a href="#">Easily Managable</a></h3>
+                            <p>Seamlessly aggregate pandemic for leadership through functionalized & information
+                                technology.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1000ms">
+                    <div class="web-app-feature-innerbox">
+                        <div class="web-app-feature-icon position-relative pera-content">
+                            <span class="web-app-f-shape position-absolute shape1"><img
+                                    src="{% static 'theme/img/web-application/shape/f-sh1.png' %}" alt=""></span>
+                            <span class="web-app-f-shape position-absolute shape2"><img
+                                    src="{% static 'theme/img/web-application/shape/f-sh2.png' %}" alt=""></span>
+                            <span class="web-app-f-shape position-absolute shape3"><img
+                                    src="{% static 'theme/img/web-application/shape/f-sh3.png' %}" alt=""></span>
+                            <img src="{% static 'theme/img/web-application/icon/f-icon3.png' %}" alt="">
+                        </div>
+                        <div class="web-app-feature-text web-app-headline">
+                            <h3><a href="#">Powerful Idea </a></h3>
+                            <p>Seamlessly aggregate pandemic for leadership through functionalized & information
+                                technology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of feature section
+    ============================================= -->
+
+<!-- Start of fun fact section
+    ============================================= -->
+<section id="web-app-fun-fact" class="web-app-fun-fact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="web-app-fun-fact-counter">
+                    <div class="web-app-fun-fact-number pera-content">
+                        <span class="odometer" data-count="12000">00</span><strong>+</strong>
+                        <p>Active User</p>
+                        <div class="fun-bottom-shape"><img
+                                src="{% static 'theme/img/web-application/shape/fn-sh1.png' %}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="web-app-fun-fact-counter">
+                    <div class="web-app-fun-fact-number pera-content">
+                        <span class="odometer" data-count="155">00</span><strong>+</strong>
+                        <p>Team member</p>
+                        <div class="fun-bottom-shape"><img
+                                src="{% static 'theme/img/web-application/shape/fn-sh2.png' %}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="web-app-fun-fact-counter">
+                    <div class="web-app-fun-fact-number pera-content">
+                        <span class="odometer" data-count="23000">00</span><strong>+</strong>
+                        <p>Feedback</p>
+                        <div class="fun-bottom-shape"><img
+                                src="{% static 'theme/img/web-application/shape/fn-sh3.png' %}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of fun fact section
+    ============================================= -->
+
+<!-- Start of about section
+    ============================================= -->
+<section id="web-app-about" class="web-app-about-section">
+    <div class="container">
+        <div class="web-app-about-text-img  web-app-about-left-img">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="web-app-about-text web-app-headline pera-content">
+                        <div class="web-app-section-title web-app-headline wow fadeFromUp" data-wow-delay="300ms"
+                             data-wow-duration="1000ms">
+                            <h2>Web page coloring <span>awesome option.</span></h2>
+                        </div>
+                        <div class="web-app-about-txt-content wow fadeFromUp" data-wow-delay="600ms"
+                             data-wow-duration="1000ms">There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour, or randomised
+                            words which don't look even slightly believable.
+                        </div>
+                        <a class="web-app-about-btn text-center wow fadeFromUp" data-wow-delay="900ms"
+                           data-wow-duration="1000ms" href="#">Get Started Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 wow fadeFromRight" data-wow-delay="600ms" data-wow-duration="1000ms">
+                    <div class="web-app-about-img-content position-relative">
+                        <div class="web-about-img-1">
+                            <img src="{% static 'theme/img/web-application/about/w-abt1.png' %}" alt="">
+                        </div>
+                        <div class="web-about-img-2 position-absolute" data-parallax='{"x" : 50}'>
+                            <div class="web-about-img-wrap">
+                                <img src="{% static 'theme/img/web-application/about/w-abt2.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="web-app-about-text-img  web-app-about-right-img">
+            <div class="row">
+                <div class="col-lg-7  wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1000ms">
+                    <div class="web-app-about-img-content position-relative">
+                        <div class="web-about-img-1">
+                            <img src="{% static 'theme/img/web-application/about/w-abt3.png' %}" alt="">
+                        </div>
+                        <div class="web-about-img-2 position-absolute" data-parallax='{"y" : -50}'>
+                            <div class="web-about-img-wrap">
+                                <img src="{% static 'theme/img/web-application/about/w-abt4.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="web-app-about-text web-app-headline pera-content">
+                        <div class="web-app-section-title web-app-headline  wow fadeFromUp" data-wow-delay="300ms"
+                             data-wow-duration="1000ms">
+                            <h2>Service Your Customers <span>Around The World #10</span></h2>
+                        </div>
+                        <div class="web-app-about-txt-content  wow fadeFromUp" data-wow-delay="600ms"
+                             data-wow-duration="1000ms">There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour, or randomised
+                            words which don't look even slightly believable.
+                        </div>
+                        <a class="web-app-about-btn text-center  wow fadeFromUp" data-wow-delay="900ms"
+                           data-wow-duration="1000ms" href="#">Get Started Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of about section
+    ============================================= -->
+
+<!-- Start of testimonial section
+    ============================================= -->
+<section id="web-app-testimonial" class="web-app-testimonial-section position-relative">
+    <span class="web-app-testimonial-side-img  wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1000ms"><img
+            src="{% static 'theme/img/web-application/tst2.png' %}" alt=""></span>
+    <div class="container">
+        <div class="web-app-textimonial-content">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="web-app-section-title web-app-headline  wow fadeFromUp" data-wow-delay="300ms"
+                         data-wow-duration="1000ms">
+                        <h2>Our client’s testimonials <span>for company progress</span></h2>
+                    </div>
+                    <div id="web-app-testimoial-slide"
+                         class="web-app-testimonial-slider-wrap owl-carousel position-relative  wow fadeFromRight"
+                         data-wow-delay="600ms" data-wow-duration="1000ms">
+                        <div class="web-app-testimonial-img-text  position-relative">
+                            <div class="web-app-testimonial-img position-relative">
+                                <img src="{% static 'theme/img/web-application/tst1.jpg'%}" alt="">
+                                </div>
+                                <div class=" web-app-testimonial-text web-app-headline pera-content">
+                                <p>Easily organize your infrastructure with Projects. And with Teams, everyone can get
+                                    their own account, with just the privileges they need to do their jobs.</p>
+                                <div class="web-app-testimonial-author">
+                                    <h4><a href="#">Alex D. Denz</a></h4>
+                                    <span>Founder, Alex Co.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-app-testimonial-img-text  position-relative">
+                            <div class="web-app-testimonial-img position-relative">
+                                <img src="{% static 'theme/img/web-application/tst1.jpg'%}" alt="">
+                                </div>
+                                <div class=" web-app-testimonial-text web-app-headline pera-content">
+                                <p>Easily organize your infrastructure with Projects. And with Teams, everyone can get
+                                    their own account, with just the privileges they need to do their jobs.</p>
+                                <div class="web-app-testimonial-author">
+                                    <h4><a href="#">Alex D. Denz</a></h4>
+                                    <span>Founder, Alex Co.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-app-testimonial-img-text  position-relative">
+                            <div class="web-app-testimonial-img position-relative">
+                                <img src="{% static 'theme/img/web-application/tst1.jpg'%}" alt="">
+                                </div>
+                                <div class=" web-app-testimonial-text web-app-headline pera-content">
+                                <p>Easily organize your infrastructure with Projects. And with Teams, everyone can get
+                                    their own account, with just the privileges they need to do their jobs.</p>
+                                <div class="web-app-testimonial-author">
+                                    <h4><a href="#">Alex D. Denz</a></h4>
+                                    <span>Founder, Alex Co.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of testimonial section
+    ============================================= -->
+
+<!-- Start of download app section
+    ============================================= -->
+<section id="web-app-download" class="web-app-download-section">
+    <div class="container">
+        <div class="web-app-download-content position-relative">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="web-app-download-img">
+                        <div class="web-app-download-img-wrap">
+                            <img src="{% static 'theme/img/web-application/about/w-abt5.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="web-app-download-text">
+                        <div class="web-app-section-title web-app-headline  wow fadeFromUp" data-wow-delay="300ms"
+                             data-wow-duration="1000ms">
+                            <h2>Download our latest app <span>for Wordpress development.</span></h2>
+                        </div>
+                        <p class="wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1000ms">There are many
+                            variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                            in some form, by injected humour.</p>
+                        <a class="web-app-about-btn text-center  wow fadeFromUp" data-wow-delay="900ms"
+                           data-wow-duration="1000ms" href="#">Download this app <i class="flaticon-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of download section
+    ============================================= -->
+
+<!-- Start of  pricing section
+    ============================================= -->
+<section id="web-app-pricing" class="web-app-pricing-section">
+    <div class="container">
+        <div class="web-app-section-title web-app-headline text-center">
+            <h2>Our Pricing Plan for <span>your best business</span></h2>
+        </div>
+        <div class="web-app-pricing-plan-item">
+            <div class="web-app-pricing-plan-tab-btn ul-li text-center clearfix">
+                <ul id="tabs" class="nav text-uppercase nav-tabs">
+                    <li class="nav-item"><a href="#" data-target="#yearly" data-toggle="tab"
+                                            class="nav-link text-capitalize active">Yearly Plan </a></li>
+                    <li class="nav-item"><a href="#" data-target="#monthly" data-toggle="tab"
+                                            class="nav-link text-capitalize">Monthly Plan</a></li>
+                </ul>
+            </div>
+            <div id="tabsContent" class="tab-content">
+                <div id="yearly" class="tab-pane fade active show">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6  wow fadeFromUp" data-wow-delay="00ms" data-wow-duration="1000ms">
+                            <div class="web-app-pricing-plan web-app-headline text-center ul-li-block">
+                                <div class="web-app-pricing-title">
+                                    <h3>Personal</h3>
+                                    <span>Yearly Plan</span>
+                                </div>
+                                <div class="web-app-pricing-price">
+                                    <span>$</span>49
+                                </div>
+                                <div class="web-app-pricing-content clearfix">
+                                    <ul>
+                                        <li>1 GB SSD Storage</li>
+                                        <li>50 GB Data Transfer</li>
+                                        <li>512 MB Ram Limit</li>
+                                        <li>20 Entry Process</li>
+                                        <li>20 MB/s I/O Limit</li>
+                                        <li>10 Emails, Database</li>
+                                        <li>Single Website</li>
+                                        <li>Free SSl certificate</li>
+                                    </ul>
+                                </div>
+                                <div class="web-app-price-btn text-capitalize">
+                                    <a href="#">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6  wow fadeFromUp" data-wow-delay="300ms"
+                             data-wow-duration="1000ms">
+                            <div class="web-app-pricing-plan web-app-headline text-center ul-li-block">
+                                <div class="web-app-pricing-title">
+                                    <h3>Startup</h3>
+                                    <span>Yearly Plan</span>
+                                </div>
+                                <div class="web-app-pricing-price">
+                                    <span>$</span>69
+                                </div>
+                                <div class="web-app-pricing-content clearfix">
+                                    <ul>
+                                        <li>5 GB SSD Storage</li>
+                                        <li>250 GB Data Transfer</li>
+                                        <li>512 MB Ram Limit</li>
+                                        <li>1 GB Ram Limit</li>
+                                        <li>100 Entry Process</li>
+                                        <li>50 MB/s I/O Limit</li>
+                                        <li>50 Emails, Database</li>
+                                        <li>4 Website</li>
+                                    </ul>
+                                </div>
+                                <div class="web-app-price-btn text-capitalize">
+                                    <a href="#">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6  wow fadeFromUp" data-wow-delay="900ms"
+                             data-wow-duration="1000ms">
+                            <div class="web-app-pricing-plan web-app-headline text-center ul-li-block">
+                                <div class="web-app-pricing-title">
+                                    <h3>Corporate</h3>
+                                    <span>Yearly Plan</span>
+                                </div>
+                                <div class="web-app-pricing-price">
+                                    <span>$</span>99
+                                </div>
+                                <div class="web-app-pricing-content clearfix">
+                                    <ul>
+                                        <li>10 GB SSD Storage</li>
+                                        <li>500 GB Data Transfer</li>
+                                        <li>2 GB Ram Limit</li>
+                                        <li>20 Entry Process</li>
+                                        <li>200 Entry Process</li>
+                                        <li>20 MB/s I/O Limit</li>
+                                        <li>100 Emails, Database</li>
+                                        <li>20 Website</li>
+                                    </ul>
+                                </div>
+                                <div class="web-app-price-btn text-capitalize">
+                                    <a href="#">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="monthly" class="tab-pane fade ">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6  wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+                            <div class="web-app-pricing-plan web-app-headline text-center ul-li-block">
+                                <div class="web-app-pricing-title">
+                                    <h3>Personal</h3>
+                                    <span>Monthly Plan</span>
+                                </div>
+                                <div class="web-app-pricing-price">
+                                    <span>$</span>49
+                                </div>
+                                <div class="web-app-pricing-content clearfix">
+                                    <ul>
+                                        <li>1 GB SSD Storage</li>
+                                        <li>50 GB Data Transfer</li>
+                                        <li>512 MB Ram Limit</li>
+                                        <li>20 Entry Process</li>
+                                        <li>20 MB/s I/O Limit</li>
+                                        <li>10 Emails, Database</li>
+                                        <li>Single Website</li>
+                                        <li>Free SSl certificate</li>
+                                    </ul>
+                                </div>
+                                <div class="web-app-price-btn text-capitalize">
+                                    <a href="#">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6  wow fadeFromUp" data-wow-delay="300ms"
+                             data-wow-duration="1000ms">
+                            <div class="web-app-pricing-plan web-app-headline text-center ul-li-block">
+                                <div class="web-app-pricing-title">
+                                    <h3>Startup</h3>
+                                    <span>Monthly Plan</span>
+                                </div>
+                                <div class="web-app-pricing-price">
+                                    <span>$</span>69
+                                </div>
+                                <div class="web-app-pricing-content clearfix">
+                                    <ul>
+                                        <li>5 GB SSD Storage</li>
+                                        <li>250 GB Data Transfer</li>
+                                        <li>512 MB Ram Limit</li>
+                                        <li>1 GB Ram Limit</li>
+                                        <li>100 Entry Process</li>
+                                        <li>50 MB/s I/O Limit</li>
+                                        <li>50 Emails, Database</li>
+                                        <li>4 Website</li>
+                                    </ul>
+                                </div>
+                                <div class="web-app-price-btn text-capitalize">
+                                    <a href="#">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6  wow fadeFromUp" data-wow-delay="900ms"
+                             data-wow-duration="1000ms">
+                            <div class="web-app-pricing-plan web-app-headline text-center ul-li-block">
+                                <div class="web-app-pricing-title">
+                                    <h3>Corporate</h3>
+                                    <span>Monthly Plan</span>
+                                </div>
+                                <div class="web-app-pricing-price">
+                                    <span>$</span>99
+                                </div>
+                                <div class="web-app-pricing-content clearfix">
+                                    <ul>
+                                        <li>10 GB SSD Storage</li>
+                                        <li>500 GB Data Transfer</li>
+                                        <li>2 GB Ram Limit</li>
+                                        <li>20 Entry Process</li>
+                                        <li>200 Entry Process</li>
+                                        <li>20 MB/s I/O Limit</li>
+                                        <li>100 Emails, Database</li>
+                                        <li>20 Website</li>
+                                    </ul>
+                                </div>
+                                <div class="web-app-price-btn text-capitalize">
+                                    <a href="#">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of pricing section
+    ============================================= -->
+
+<!-- Start of  newslatter section
+    ============================================= -->
+<section id="web-app-newslatter" class="web-app-newslatter-section">
+    <div class="web-app-newslatter-content position-relative">
+        <span class="web-app-newslatter-bg position-absolute"><img
+                src="{% static 'theme/img/web-application/wn-bg.png' %}" alt=""></span>
+        <div class="container">
+            <div class="web-app-newslatter-wrap">
+                <div class="web-app-section-title text-center pera-content web-app-headline">
+                    <h2>Get the latest update of SaaSio app <span>Subscribe Now!</span></h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. </p>
+                </div>
+                <div class="web-app-newslatter-form position-relative">
+                    <input type="text" placeholder="Enter your mail address">
+                    <button>Subscribe Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of  newslatter section
+    ============================================= -->
+
+<!-- Start of Footer section
+    ============================================= -->
+<section id="web-app-footer" class="web-app-footer-section">
+    <div class="web-app-footer-top">
+        <div class="container">
+            <div class="web-app-footer-top-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="web-app-footer-contact">
+                            <span>Connect With Us</span>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="web-app-footer-top-menu ul-li">
+                            <ul>
+                                <li><a href="#">Comapny</a></li>
+                                <li><a href="#">Team Members</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Help & FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="web-app-footer-content">
+        <div class="container">
+            <div class="web-app-footer-wrapper">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="web-app-footer-widget">
+                            <div class="web-app-logo-widget pera-content">
+                                <div class="web-app-footer-logo float-left">
+                                    <a href="#"><img
+                                            src="{% static 'theme/img/web-application/logo/logo-2.png' %}"
+                                            alt="logo"></a>
+                                </div>
+                                <div class="web-app-footer-support d-inline-block position-relative">
+                                    <span>Copyright by</span>
+                                    <a href="#">Themexriver</a> -2021
+                                </div>
+                                <p>
+                                    Free <a href="#">soft-m</a>system for your sales team with all the essential tools
+                                    sales funnel, pipeline management, sales reports, <a href="#">360-degree</a>
+                                    customer view, support for repeat sales
+                                </p>
+                                <div class="soft-footer-btn text-center">
+                                    <a href="#"><i class="fas fa-desktop"></i> Try A Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12">
+                        <div class="web-app-footer-widget web-app-headline pera-content">
+                            <div class="web-app-footer-menu-widget ul-li-block">
+                                <h3 class="widget-title">Support</h3>
+                                <ul>
+                                    <li><a href="#">Knowledge Base</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Developer API</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                                <div class="web-app-footer-store">
+                                    <a href="#"><img
+                                            src="{% static 'theme/img/web-application/logo/i-icon.png' %}" alt=""></a>
+                                    <a href="#"><img
+                                            src="{% static 'theme/img/web-application/logo/g-icon.png' %}" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-app-footer-widget web-app-headline pera-content">
+                            <div class="web-app-footer-menu-widget ul-li-block">
+                                <h3 class="widget-title">Features</h3>
+                                <ul>
+                                    <li><a href="#">Sales Management</a></li>
+                                    <li><a href="#">Contact Management</a></li>
+                                    <li><a href="#">Project Management</a></li>
+                                    <li><a href="#">HR Management</a></li>
+                                    <li><a href="#">Integrations and API</a></li>
+                                    <li><a href="#">Gmail &amp; G Suite</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="web-app-footer-widget web-app-headline pera-content">
+                            <div class="web-app-footer-menu-widget ul-li-block">
+                                <h3 class="widget-title">About</h3>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Affiliate Program</a></li>
+                                    <li><a href="#">Customer Spotlight</a></li>
+                                    <li><a href="#">Reseller Program</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Footer section
+    ============================================= -->
+
+<!-- JS library -->
+<script src="{% static 'theme/js/jquery.js' %}"></script>
+<script src="{% static 'theme/js/popper.min.js' %}"></script>
+<script src="{% static 'theme/js/appear.js' %}"></script>
+<script src="{% static 'theme/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'theme/js/wow.min.js' %}"></script>
+<script src="{% static 'theme/js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'theme/js/tilt.jquery.min.js' %}"></script>
+<script src="{% static 'theme/js/owl.js' %}"></script>
+<script src="{% static 'theme/js/typer-new.js' %}"></script>
+<script src="{% static 'theme/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'theme/js/odometer.js' %}"></script>
+<script src="{% static 'theme/js/parallax-scroll.js' %}"></script>
+<script src="{% static 'theme/js/web-application.js' %}"></script>
+</body>
+
+</html>
