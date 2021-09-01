@@ -1,10 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% load static %}
+<!-- Start of header section
+    ============================================= -->
+<header id="web-app-header" class="web-app-main-header">
+    <div class="container">
+        <div class="web-app-main-header-content clearfix">
+            <div class="web-app-brand-logo float-left">
+                <a href="/"><b class="font-weight-bolder" style="font-size: 20px;">WFL</b></a>
+            </div>
+            <div class="web-app-main-menu-item float-right">
+                <nav class="web-app-main-navigation  clearfix ul-li">
+                    <ul id="main-nav" class="navbar-nav text-capitalize">
+                        <li><a class="nav-link" href="#web-app-feature">Services</a></li>
+                        <li><a class="nav-link" href="#web-app-fun-fact">Registrations</a></li>
+                        <li><a class="nav-link" href="#web-app-about">Advantages</a></li>
+                        <li><a class="nav-link" href="#web-app-pricing">Pricing</a></li>
+                        <li><a class="nav-link" href="#web-app-newslatter">Newslatter</a></li>
+                    </ul>
+                </nav>
+                <div class="web-app-header-btn text-center float-right">
+                    <a href="#">SIGNIN</a>
+                </div>
+            </div>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="web-app-mobile_menu position-relative">
+            <div class="web-app-mobile_menu_button web-app-open_mobile_menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="web-app-mobile_menu_wrap">
+                <div class="mobile_menu_overlay web-app-open_mobile_menu"></div>
+                <div class="web-app-mobile_menu_content">
+                    <div class="web-app-mobile_menu_close web-app-open_mobile_menu">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="m-brand-logo text-center">
+                        <a href="%21.html#"><img src="{% static 'theme/img/web-application/logo/logo1.png' %}"
+                                                 alt=""></a>
+                    </div>
+                    <nav class="web-app-mobile-main-navigation  clearfix ul-li">
+                        <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
+                            <li class="dropdown">
+                                <a href="#">Home</a>
+                                <ul class="dropdown-menu clearfix">
+                                    <li><a href="#">DropDown 1</a></li>
+                                    <li><a href="#">DropDown 2</a></li>
+                                    <li><a href="#">DropDown 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Features</a>
+                                <ul class="dropdown-menu clearfix">
+                                    <li><a href="#">DropDown 1</a></li>
+                                    <li><a href="#">DropDown 2</a></li>
+                                    <li><a href="#">DropDown 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Pricing </a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /Mobile-Menu -->
+        </div>
+    </div>
+</header>
+<!-- Start of header section
+    ============================================= -->

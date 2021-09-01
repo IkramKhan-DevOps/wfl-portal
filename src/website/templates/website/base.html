@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+    
+        {% block title_main %}
+            WFL ||
+            {% block title_sub %}
+                HOME
+            {% endblock %}
+        {% endblock %}
+    
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% block seo %}
+        
+    {% endblock %}
+    
+    <link rel="shortcut icon" href="{% static 'core/icons/favico.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'theme/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/fontawesome-all.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/jquery.mCustomScrollbar.min.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/odometer-theme-default.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/web-application.css' %}">
+
+    {% block css_links %}
+
+    {% endblock %}
+
+</head>
+<body class="web-app-home" data-spy="scroll" data-target=".web-app-main-navigation" data-offset="80">
+<!-- preloader - start -->
+<div id="web-app-preloader"></div>
+<div class="up">
+    <a href="#" class="web-app-scrollup text-center">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+{% include 'website/include/header.html' %}
+
+{% block content %}
+    
+{% endblock content %}
+
+
+
+<!-- JS library -->
+<script src="{% static 'theme/js/jquery.js' %}"></script>
+<script src="{% static 'theme/js/popper.min.js' %}"></script>
+<script src="{% static 'theme/js/appear.js' %}"></script>
+<script src="{% static 'theme/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'theme/js/wow.min.js' %}"></script>
+<script src="{% static 'theme/js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'theme/js/tilt.jquery.min.js' %}"></script>
+<script src="{% static 'theme/js/owl.js' %}"></script>
+<script src="{% static 'theme/js/typer-new.js' %}"></script>
+<script src="{% static 'theme/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'theme/js/odometer.js' %}"></script>
+<script src="{% static 'theme/js/parallax-scroll.js' %}"></script>
+<script src="{% static 'theme/js/web-application.js' %}"></script>
+
+{% block js_links %}
+    
+{% endblock js_links %}
+
+</body>
+
+</html>
+{% block js_code %}
+    
+{% endblock js_code %}
