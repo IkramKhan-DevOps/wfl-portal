@@ -2,7 +2,6 @@ django
 django-ckeditor
 django-crispy-forms
 python-decouple
-django-robots
 pillow
 python-decouple
 

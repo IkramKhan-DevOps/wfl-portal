@@ -17,8 +17,11 @@ import os
 """ VAR ----------------------------------------------------------------------------------------"""
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('DJANGO_APPLICATION_SECRET')
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 ROOT_URLCONF = 'core.urls'
+
 DEBUG = True
+SERVER = False
 
 if DEBUG:
     HOST = config('DJANGO_LOCAL_HOST')
@@ -123,13 +126,13 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 """ EMAIL SYSTEM ---------------------------------------------------------------------------------"""
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_USE_TLS = True
 
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = config('EMAIL_HOST_PORT')
+# EMAIL_HOST = config('EMAIL_HOST')
+# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+# EMAIL_PORT = config('EMAIL_HOST_PORT')
 
-DEFAULT_FROM_EMAIL = 'Exarth <noreply@application.com>'
+# DEFAULT_FROM_EMAIL = 'Exarth <noreply@application.com>'
